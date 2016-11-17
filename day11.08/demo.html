@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<title>练习</title>
+	<style>
+		*{
+			margin: 0px;
+			padding: 0px;
+		}
+		.left{
+			width:100px;
+			height:500px;
+			background:pink;
+			float:left;
+		}
+		.right{
+			width:100px;
+			height:500px;
+			background:pink;
+			float:right;
+		}
+			.center{
+			width:100%;
+			height:500px;
+			background-color: red;
+			margin:0 100px;
+		}
+	</style>
+</head>
+<body>
+	<ul id="test">
+		<li>第一个li</li>
+		<li>第二个li</li>
+		<li>第三个li</li>
+		<li>第四个li</li>
+	</ul>
+	<!-- <div class="left"></div>
+<div class="right"></div>
+<div class="center"></div> -->
+</body>
+	<script>
+	// var res=prompt("请输入数据","在这里输入数据");
+	// alert("输入的数据是"+res);
+	// alert("继续下一步操作。。");
+	// 
+	// 封装一个原型方法除重
+	// Array.prototype.distinct=function(){
+	// 	var _arr=new Array();
+	// 	var obj={};
+	// 	for(var i=0;i<this.length;i++){
+	// 		var val=this[i];
+	// 		if(!obj[val]){//如果数组里面不存在则存进新的数组
+	// 			obj[val]=1;
+	// 			_arr.push(val);
+	// 		}
+	// 	}
+	// 	return(_arr);
+	// }
+	// var arr=[435,56,78,56,4,78];
+	// console.log(arr.distinct());
+	//正则表达式替换
+	// var str="<tr><td>{$id}</td><td>{$name}</td></tr>";
+	// str=str.replace(/\{\$id\}/g,10).replace(/\{\$name\}/g,"tony");
+	// alert(str);
+	// 
+	// function escapeHtml(str){
+	// 	return str.replace(/[<>&"]/g,function(match){
+	// 		switch(match){
+	// 			case "<" :return "&lt;";
+	// 			case ">" :return "&gt;";
+	// 			case "&" :return "&amp;";
+	// 			case "\"" :return "&quot;";
+	// 		}
+	// 	})
+	// }
+	// var str='<span>this is my "&test"</span>'
+	// alert(str);
+	// str=escapeHtml(str);
+	// alert(str);
+	// 
+	// for(var i=0;i<=3;i++){
+	// 	setTimeout(function(){
+	// 		// alert(i);
+	// 		console.log(i);
+	// 	},0);
+	// }
+		//清除字符串前后的空格
+		// String.prototype.clearkong=function(){
+		// 	return this.replace(/^\s+/," ").replace(/\s+$/," ");
+		// }
+		// var str="jasnbdfi";
+		// alert(str.length);
+		// str=str.clearkong();
+		// alert(str.length);
+		// 
+		// var lis=document.getElementById("test").children;
+		// for(var i=0;i<lis.length;i++){
+		// 	lis[i].onclick=(function(num){
+		// 		return function(){
+		// 			alert(num);
+		// 		};
+		// 	})(i);
+		// }
+		// 
+		String.prototype.repeattify=function(num){
+			if(!num||num<=0){
+				return this;
+			}else{
+				var str="";
+				for(var i=0;i<num;i++){
+					str+=this;
+				}
+				return str;
+			}
+		}
+		var str="hello";
+		str=str.repeattify(4);
+		console.log(str);
+	</script>
+</html>
